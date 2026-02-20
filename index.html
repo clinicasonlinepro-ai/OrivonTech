@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orivon Tech | Sites para Clínicas Odontológicas</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+
+    <div class="logo">
+      <strong>Orivon Tech</strong>
+      <span>Orivon</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#problema">Problema</a></li>
+      <li><a href="#solucao">Solução</a></li>
+      <li><a href="#exemplo">Exemplo</a></li>
+      <li><a href="#oferta">Oferta</a></li>
+      <li><a href="https://wa.me/5545991002660" class="btn-nav">Falar no WhatsApp</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Pare de perder pacientes por não ter um site profissional.</h1>
+    <p>
+      Criamos landing pages estratégicas para clínicas odontológicas 
+      que querem mais agendamentos e autoridade online.
+    </p>
+    <a href="https://wa.me/5545991002660" class="btn-main">
+      Quero minha landing page
+    </a>
+  </div>
+</section>
+
+<section id="problema" class="section">
+  <h2>O problema</h2>
+  <p>
+    Se sua clínica não aparece bem no Google ou não transmite confiança online,
+    você está deixando pacientes irem direto para o concorrente.
+  </p>
+</section>
+
+<section id="solucao" class="section bg-light">
+  <h2>A solução</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Design Profissional</h3>
+      <p>Layout moderno e focado em conversão.</p>
+    </div>
+
+    <div class="card">
+      <h3>WhatsApp Integrado</h3>
+      <p>Contato direto para aumentar agendamentos.</p>
+    </div>
+
+    <div class="card">
+      <h3>Carregamento Rápido</h3>
+      <p>Site leve e otimizado para dispositivos móveis.</p>
+    </div>
+  </div>
+</section>
+
+<section id="exemplo" class="section">
+  <h2>Veja um exemplo real</h2>
+  <p>Landing page desenvolvida como modelo para clínicas odontológicas.</p>
+
+  <a href="https://sorriso-pronto.vercel.app/" 
+     target="_blank" 
+     class="btn-main">
+     Ver Site Exemplo
+  </a>
+</section>
+
+<section id="oferta" class="section bg-dark">
+  <h2>Oferta</h2>
+
+  <div class="oferta-box">
+    <h3>Landing Page Estratégica</h3>
+
+    <ul>
+      <li>✔ Estrutura focada em conversão</li>
+      <li>✔ Integração com WhatsApp</li>
+      <li>✔ Design profissional</li>
+      <li>✔ Otimização básica para Google</li>
+    </ul>
+
+    <p class="preco">Investimento: R$ 1.500</p>
+
+    <a href="https://wa.me/5545991002660" class="btn-main">
+      Fechar agora pelo WhatsApp
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Orivon Tech. Todos os direitos reservados.</p>
+</footer>
+
+<a href="https://wa.me/5545991002660" class="whatsapp-float">💬</a>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+const navItems = document.querySelectorAll('.nav-links a');
+
+// Abre / fecha pelo botão
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Fecha ao clicar em qualquer link
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+// Fecha ao clicar fora do menu
+document.addEventListener('click', (e) => {
+  if (!navLinks.contains(e.target) && 
+      !hamburger.contains(e.target)) {
+    navLinks.classList.remove('active');
+  }
+});
+</script>
+
+</body>
+</html>
