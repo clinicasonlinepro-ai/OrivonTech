@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #1e293b;
+}
+
+header {
+  background: white;
+  padding: 15px 5%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo span {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.btn-nav {
+  background: #2563eb;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.hero {
+  padding: 80px 5%;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.btn-main {
+  background: #2563eb;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.section {
+  padding: 70px 5%;
+  text-align: center;
+}
+
+.bg-light {
+  background: #f1f5f9;
+}
+
+.bg-dark {
+  background: #0f172a;
+  color: white;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.oferta-box {
+  max-width: 500px;
+  margin: auto;
+}
+
+.oferta-box ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.preco {
+  font-size: 22px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f1f5f9;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* MOBILE */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1e293b;
+}
+
+@media(max-width:768px){
+
+.nav-links {
+  position: absolute;
+  top: 70px;
+  right: -100%;
+  flex-direction: column;
+  background: white;
+  width: 200px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.nav-links.active {
+  right: 0;
+}
+
+.hamburger {
+  display: flex;
+}
+
+.grid {
+  flex-direction: column;
+  align-items: center;
+}
+
+}
