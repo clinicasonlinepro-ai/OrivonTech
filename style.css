@@ -1,0 +1,309 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0b0f;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(11, 11, 15, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.logo img {
+  height: 45px;
+}
+
+/* Desktop Menu */
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-desktop a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav-desktop a:hover {
+  color: #6c5cff;
+}
+
+.btn-nav {
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #004cff, #6c00ff, #00e0ff);
+  font-weight: 600;
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* ================= MOBILE MENU ================= */
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 110px;
+  right: 50%;
+  transform: translateX(50%) translateY(-20px);
+  width: 85%;
+  max-width: 350px;
+  background: #111118;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 1001;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-mobile {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  background: linear-gradient(90deg, #004cff, #6c00ff, #00e0ff);
+  font-weight: 600;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(50%) translateY(0);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 100vh;
+  padding: 140px 6% 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 14px 24px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #004cff, #6c00ff, #00e0ff);
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-outline {
+  padding: 14px 24px;
+  border-radius: 6px;
+  border: 1px solid #6c5cff;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Canvas do 8 */
+
+#infinityCanvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* ================= SEÇÕES ================= */
+
+section {
+  padding: 100px 6%;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 280px;
+  background: #14141c;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 25px rgba(108, 92, 255, 0.4);
+}
+
+/* ================= EXEMPLO ================= */
+
+.exemplo-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.exemplo-container img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 76, 255, 0.3);
+}
+
+/* ================= OFERTA ================= */
+
+.oferta-box {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  background: #14141c;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.preco {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+.condicao {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 999;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111118;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 900px) {
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .exemplo-container {
+    flex-direction: column;
+  }
+}
