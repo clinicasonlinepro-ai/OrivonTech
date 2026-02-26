@@ -121,44 +121,79 @@ font-weight:600;
 
 /* HERO */
 
-.hero{
-position:relative;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:0 8%;
-text-align:center;
-overflow:hidden;
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: #050507;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 60px;
+  overflow: hidden;
 }
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:800px;
+#infinityCanvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.hero h1{
-font-size:38px;
-margin-bottom:20px;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
 }
 
-.hero p{
-color:#aaa;
-margin-bottom:30px;
+.hero h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
-.hero-buttons{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+.hero p {
+  font-size: 18px;
+  color: #bdbdbd;
+  margin-bottom: 40px;
 }
 
-#energyCanvas{
-position:absolute;
-inset:0;
-z-index:1;
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 16px 32px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00bfff, #8a2be2, #00ffff);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  padding: 16px 32px;
+  border-radius: 12px;
+  border: 1px solid #444;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: #8a2be2;
 }
 
 /* BOTÕES */
