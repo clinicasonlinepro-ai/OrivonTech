@@ -1,0 +1,333 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #0b0b0f;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11,11,15,0.85);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 42px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cfcfcf;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.btn-whatsapp {
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00b4ff, #7a00ff, #00ffe1);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 160px 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #bdbdbd;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    padding: 16px 30px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #00b4ff, #7a00ff, #00ffe1);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    padding: 16px 30px;
+    border-radius: 12px;
+    border: 1px solid #444;
+    background: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+    border-color: #00b4ff;
+}
+
+/* =========================
+   CANVAS DO 8
+========================= */
+
+#infinityCanvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    padding: 100px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   PROBLEMA
+========================= */
+
+.problem {
+    background: #111118;
+    text-align: center;
+}
+
+.problem h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.problem ul {
+    list-style: none;
+    display: grid;
+    gap: 15px;
+    color: #bcbcbc;
+}
+
+/* =========================
+   SOLUÇÃO
+========================= */
+
+.solution {
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background: #14141c;
+    padding: 40px;
+    border-radius: 16px;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 25px rgba(0, 180, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+/* =========================
+   EXEMPLO
+========================= */
+
+.example-section {
+    background: #0b0b0f;
+}
+
+.example-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.example-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 180, 255, 0.25);
+}
+
+/* =========================
+   OFERTA
+========================= */
+
+.offer {
+    text-align: center;
+    background: #111118;
+    border-radius: 20px;
+    padding: 80px 20px;
+}
+
+.price {
+    font-size: 42px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.special {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #00ffe1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #0a0a0d;
+    color: #777;
+}
+
+/* =========================
+   WHATSAPP FLUTUANTE
+========================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 140px 20px 80px;
+    }
+
+    #infinityCanvas {
+        width: 500px;
+        height: 350px;
+    }
+
+    .example-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .example-image img {
+        max-width: 300px;
+    }
+
+}
